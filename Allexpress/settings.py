@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-yaqzrots*1_ssf6ac&y3fg0ix5_pz#^clcf-40@u3ilb7l0w*1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# # ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # CSRF_TRUSTED_ORIGINS = [
 #     'https://sandbox.sslcommerz.com',  # Add SSLCommerz domain here
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
